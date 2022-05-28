@@ -30,8 +30,8 @@ internal class DefaultUserRepository @Inject constructor(
         @OptIn(ExperimentalPagingApi::class)
         return Pager(
             config = PagingConfig(
-                pageSize = 10,
-                initialLoadSize = 10,
+                pageSize = 100,
+                initialLoadSize = 100,
             ),
             remoteMediator = SearchUserRemoteMediator(localUserDataSource, remoteUserDataSource, keyword),
             pagingSourceFactory = { localUserDataSource.getSearchUsers() }
