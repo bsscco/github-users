@@ -33,7 +33,7 @@ internal interface RoomUserDao {
     @Query("DELETE FROM searchUserRemotePage")
     suspend fun clearSearchUserRemotePage()
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertSearchUsers(users: List<LocalSearchUser>)
 
     @Insert
