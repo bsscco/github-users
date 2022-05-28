@@ -1,0 +1,17 @@
+rootProject.name = "github-users"
+
+include(":app")
+include(":shared:domain")
+include(":shared:data")
+include(":shared:data:remote")
+include(":shared:data:local")
+include(":shared:util:ktutil")
+include(":shared:util:aosutil")
+include(":shared:mvi")
+include(":shared:designsys")
+include(":shared:thirdparty")
+include(":shared:navigation")
+include(":feature:home")
+include(":feature:usersearch")
+include(":feature:userdetail")
+include(":feature:favorite")
