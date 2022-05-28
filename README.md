@@ -21,4 +21,4 @@
 <img src="https://github.com/bsscco/prodlist/blob/8298dc4e2f1b8f9df1c036532bb4cade099d97fc/images/all-modules-dependency.png" width="100%"/>
 
 ## APK 다운로드
-[prodlist.apk](https://github.com/bsscco/prodlist/raw/main/apk/prodlist.apk)
+[github-users.apk]([https://github.com/bsscco/prodlist/raw/main/apk/prodlist.apk](https://github.com/bsscco/github-users/blob/17654ac734670779fe99f28918a6140ab0f964cd/apk/github-users.apk))
