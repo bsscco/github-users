@@ -1,30 +1,29 @@
 object Versions {
 
-    const val AGP = "7.2.0"
+    const val AGP = "7.3.0-beta02"
 
     object JavaX {
         const val INJECT = "1"
     }
 
     object Kotlin {
-        const val KOTLIN = "1.6.10"
+        const val KOTLIN = "1.6.21"
         const val KOTLIN_COROUTINE = "1.6.0"
     }
 
     object Jetpack {
         const val CORE = "1.7.0"
         const val ROOM = "2.5.0-alpha01"
-        const val NAVIGATION = "2.4.0-rc01"
-        const val NAVIGATION_PLUGIN = "2.4.0-beta02"
+        const val NAVIGATION = "2.4.2"
         const val LIFECYCLE = "2.4.0"
         const val APP_COMPAT = "1.2.0"
         const val HILT = "2.38.1"
-        const val HILT_NAVIGATION_COMPOSE = "1.0.0-alpha03"
-        const val COMPOSE = "1.1.1"
+        const val HILT_NAVIGATION_COMPOSE = "1.0.0"
+        const val COMPOSE = "1.2.0-beta03"
         const val PAGING = "3.1.1"
-        const val PAGING_COMPOSE = "1.0.0-alpha14"
+        const val PAGING_COMPOSE = "1.0.0-alpha15"
         const val CUSTOMVIEW = "1.2.0-alpha01"
-        const val CUSTOMVIEW_POOLINGCONTAINER = "1.0.0-alpha01"
+        const val CUSTOMVIEW_POOLINGCONTAINER = "1.0.0-beta02"
     }
 
     object GMS {

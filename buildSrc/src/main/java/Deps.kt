@@ -36,7 +36,7 @@ object Deps {
         const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.Jetpack.ROOM}"
         const val ROOM_KTX = "androidx.room:room-ktx:${Versions.Jetpack.ROOM}"
         const val ROOM_PAGING = "androidx.room:room-paging:${Versions.Jetpack.ROOM}"
-        const val NAVIGATION_GRADLE_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.Jetpack.NAVIGATION_PLUGIN}"
+        const val NAVIGATION_GRADLE_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.Jetpack.NAVIGATION}"
         const val NAVIGATION_COMPOSE = "androidx.navigation:navigation-compose:${Versions.Jetpack.NAVIGATION}"
         const val LIFECYCLE_VIEWMODEL_KTX = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Jetpack.LIFECYCLE}"
         const val LIFECYCLE_VIEWMODEL_COMPOSE = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.Jetpack.LIFECYCLE}"
