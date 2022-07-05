@@ -7,7 +7,6 @@ import com.example.githubusers.domain.user.favorite.Favorite
 import com.example.githubusers.domain.user.favorite.LoadFavoritesUseCase
 import com.example.githubusers.domain.user.favorite.RemoveFavoriteUseCase
 import com.example.githubusers.ktutil.coroutine.DefaultDispatcher
-import com.example.githubusers.ktutil.flow.onErrorOrCatch
 import com.example.githubusers.ktutil.flow.onSuccess
 import com.example.githubusers.ktutil.flow.throwIfError
 import com.example.githubusers.ktutil.log.CrashReportHelper
@@ -18,6 +17,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -74,8 +74,10 @@ internal class FavoriteListViewModel @Inject constructor(
                 this.favorites = favorites
                 favoriteMap = favorites.associateBy { it.userName }
 
-                val state = favorites.toFavoriteListState()
-                reducer.setState { copy(favorites = state) }
+                reducer.setState {
+                    val state = withContext(defaultDispatcher) { favorites.toFavoriteListState() }
+                    copy(favorites = state)
+                }
             }
             .throwIfError()
             .catch { error -> handleLoadingError(error) }

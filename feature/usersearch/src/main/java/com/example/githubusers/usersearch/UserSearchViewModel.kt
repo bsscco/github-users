@@ -79,15 +79,17 @@ internal class UserSearchViewModel @Inject constructor(
 
                     userMap.clear()
 
-                    val state = pagingDataFlow
-                        .map { pagingData ->
-                            pagingData.map { user ->
-                                userMap[user.userName] = user
-                                user
+                    reducer.setState {
+                        val state = pagingDataFlow
+                            .map { pagingData ->
+                                pagingData.map { user ->
+                                    userMap[user.userName] = user
+                                    user
+                                }
                             }
-                        }
-                        .toUserListState()
-                    reducer.setState { copy(isRefreshing = false, userList = state) }
+                            .toUserListState()
+                        copy(isRefreshing = false, userList = state)
+                    }
                 }
             }
             .onErrorOrCatch { error -> handleLoadingError(error) }

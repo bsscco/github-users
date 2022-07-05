@@ -19,6 +19,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -100,8 +101,10 @@ internal class UserDetailViewModel @Inject constructor(
     private fun loadTopBar() {
         user
             .onEach { user ->
-                val state = user.toTopBarState()
-                reducer.setState { copy(topBar = state) }
+                reducer.setState {
+                    val state = withContext(defaultDispatcher) { user.toTopBarState() }
+                    copy(topBar = state)
+                }
             }
             .catch { error -> handleLoadingError(error) }
             .flowOn(defaultDispatcher)
@@ -111,8 +114,10 @@ internal class UserDetailViewModel @Inject constructor(
     private fun loadContent() {
         user
             .onEach { user ->
-                val state = user.toContentState()
-                reducer.setState { copy(content = state) }
+                reducer.setState {
+                    val state = withContext(defaultDispatcher) { user.toContentState() }
+                    copy(content = state)
+                }
             }
             .catch { error -> handleLoadingError(error) }
             .flowOn(defaultDispatcher)
