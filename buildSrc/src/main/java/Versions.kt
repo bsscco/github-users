@@ -1,6 +1,6 @@
 object Versions {
 
-    const val AGP = "7.3.0-beta02"
+    const val AGP = "7.3.0-beta05"
 
     object JavaX {
         const val INJECT = "1"
@@ -27,12 +27,12 @@ object Versions {
     }
 
     object GMS {
-        const val GOOGLE_SERVICES = "4.3.10"
+        const val GOOGLE_SERVICES = "4.3.13"
     }
 
     object Firebase {
         const val CRASHLYTICS_PLUGIN = "2.3.0"
-        const val BOM = "29.0.4"
+        const val BOM = "30.3.0"
     }
 
     const val MODULE_DEPENDENCY_GRAPH = "0.10"
